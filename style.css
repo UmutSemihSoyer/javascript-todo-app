@@ -213,3 +213,13 @@ select{
 .input-area{
   background-color: var(--white);
 }
+
+.settings {
+  display: flex;
+  flex-direction: row-reverse;
+  color: var(--addButonColor);
+  font-size: 1.5rem;
+  position: absolute;
+  top: 12%;
+  left: 97%;
+}
