@@ -1,0 +1,215 @@
+ @import url("config.css");
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-poppins);
+}
+
+body{
+  background-image: linear-gradient(120deg,var(--backgroundColorOrange),var(--backgroundColor2));
+  color: var(--textColor);
+  min-height: 100vh;
+}
+
+header{
+  margin-top: 2rem;
+  font-size: 1.5rem;
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.explain{
+  
+  font-size: 1.2rem;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.form{
+  margin-top: 5vh;
+  min-height: 10vh;
+  min-width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form input, .form button {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+}
+
+.form input{
+  background-color:var(--white);
+  outline: none;
+}
+
+.form button{
+  width: 4vh;
+  cursor: pointer;
+}
+
+.form .todo-button{
+  background-color: var(--white);
+  color: var(--addButonColor);
+}
+
+.form .todo-button:hover{
+  background-color: var(--addButonColor);
+  color: var(--black);
+}
+
+.form .todo-microphone{
+  background-color: var(--white);
+  color: var(--addButonColor);
+}
+
+.form .todo-microphone:hover{
+  background-color: var(--addButonColor);
+  color: var(--black);
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.todo-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.todo-list{
+  list-style: none;
+  min-height: 5vh;
+}
+
+.todo{
+  display: flex;
+  align-items: center;
+  margin: 10px auto;
+  font-size: 1.2rem;
+  background: var(--white);
+  color: var(--black);
+  width: 60vh;
+  min-height: 5vh;
+  transition: all 1s ease;
+}
+
+.todo-item{
+  border: none;
+}
+
+.todo input{
+  flex: 1;
+  margin-left: 2vh;
+  border: none;
+  font-size: 1rem;
+}
+
+.todo .editable {
+  border: solid 1px var(--black);
+}
+
+.todo ::placeholder{
+  color: black;
+}
+
+.buttons-div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.buttons-div button{
+  cursor: pointer;
+  border: none;
+  font-size: 1.2rem;
+  width: 5vh;
+  min-height: 5vh;
+  background-color: var(--white);
+  color: var(--addButonColor);
+}
+
+.buttons-div button .fa-trash,
+.buttons-div button .fa-check,
+.todo-microphone .fa-solidmicrophone,
+.buttons-div button .fa-sharp{
+  pointer-events: none;
+}
+
+.buttons-div button:hover{
+  background-color: var(--addButonColor);
+  color: var(--black);
+}
+
+.todo-container .complete-button {
+  margin-left: 0.2rem;
+}
+
+.completed{
+  opacity: 0.6;
+  text-decoration: line-through;
+  }
+
+.fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+
+select{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: none;
+  border: none;
+
+  color: var(--backgroundColorOrange);
+  width: 10rem;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.select{
+  margin-left: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.select::after{
+  content: "\25BC";
+  position: absolute;
+  background-color: var(--backgroundColorOrange);
+  top: 0;
+  right: 0;
+  padding: 0.85rem;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.select:hover::after{
+  background-color: var(--backgroundColor2);
+  color: var(--addButonColor);
+}
+
+
+.recording i {
+  color: var(--recording);
+ 
+}
+
+.input-area{
+  background-color: var(--white);
+}

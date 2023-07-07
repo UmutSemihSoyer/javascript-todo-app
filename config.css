@@ -1,0 +1,12 @@
+:root{
+  --white: #ffffff;
+  --black: #222831;
+  --textColor: #ffffff;
+  --addButonColor: #60b7d1;
+  --completeButonColor: #1fc01f;
+  --backgroundColorOrange: #f6d365;
+  --backgroundColor2: #fda085;
+  --recording: #ff2323;
+  
+  --font-family-poppins: 'Poppins', sans-serif;
+}
