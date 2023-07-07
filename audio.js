@@ -27,15 +27,18 @@ const dontListen = () => {
 recognition.onresult = (event) => {
   console.log('test');
   const content = event.results[0][0].transcript;
+
+  console.log(event.results[0][0].transcript);
+  
   const cont = content.split(' ');
 
   console.log(cont);
 
-  // if (cont[0] === 'ekle') {
-  console.log(cont.shift().toString());
-  addTodo(undefined, cont.shift().toString());
+  if (cont[0] === 'ekle') {
+    console.log(cont.shift().toString());
+    addTodo(undefined, cont.shift().toString());
 
-  saveLocalTodos(cont.shift().toString());
-  // }
+    saveLocalTodos(cont.shift().toString());
+  }
   recognition.onresult = null;
 };
