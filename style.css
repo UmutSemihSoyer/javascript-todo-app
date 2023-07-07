@@ -214,12 +214,40 @@ select{
   background-color: var(--white);
 }
 
-.settings {
+
+.settings button{
   display: flex;
   flex-direction: row-reverse;
   color: var(--addButonColor);
+  background-color: transparent;
+  border: none;
   font-size: 1.5rem;
   position: absolute;
   top: 12%;
   left: 97%;
+  cursor: pointer;
+}
+
+.settings i{
+  pointer-events: none;
+  z-index: 10;
+}
+
+.settings-animation {
+  transition: all 2s ease;
+  transform: rotateY(30deg);
+}
+
+.settings-area{
+  display: flex;
+  background-color:var(--black);
+  cursor: none;
+  pointer-events: none;
+  height: 105vh;
+  width: 23.6vh;
+  position: absolute;
+  top: 12%;
+  left: 80%;
+  margin-top: -5vh;
+  margin-left: -4vh;
 }

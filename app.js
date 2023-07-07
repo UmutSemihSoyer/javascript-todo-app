@@ -1,4 +1,3 @@
-localStorage.clear();
 // Selecetor
 const todoInput = document.querySelector('.todo-input');
 const todoButton = document.querySelector('.todo-button');
@@ -198,4 +197,37 @@ function removeLocalTodos(todo) {
   const todoIndex = todo.children[0].innerText;
   todos.splice(todos.indexOf(todoIndex), 1);
   localStorage.setItem('todos', JSON.stringify(todos));
+}
+
+//SETTINGS BUTTON
+const settingsDiv = document.querySelector('.settings');
+settingsDiv.addEventListener('click', settingAnimation);
+let isSettingsAreaVisible = false;
+const settingsButton = document.querySelector('.settings-button');
+
+function creatingSettingsArea() {
+  const settingsArea = document.createElement('div');
+  settingsArea.classList.add('settings-area');
+  settingsButton.appendChild(settingsArea);
+}
+
+function deletingSettingsArea() {
+  const settingsArea = document.querySelector('.settings-area');
+  settingsArea.remove('div');
+  settingsArea.classList.remove('settings-area');
+}
+
+function settingAnimation() {
+  settingsDiv.classList.toggle('settings-animation');
+  if (settingsDiv.classList.contains('settings-animation')) {
+    if (!isSettingsAreaVisible) {
+      creatingSettingsArea();
+      isSettingsAreaVisible = true;
+    }
+  } else {
+    if (isSettingsAreaVisible) {
+      isSettingsAreaVisible = false;
+      deletingSettingsArea();
+    }
+  }
 }
