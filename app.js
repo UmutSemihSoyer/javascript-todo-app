@@ -87,8 +87,6 @@ function editTodo(event) {
 
     removeLocalTodos(todoDiv);
 
-    console.log('aaa' + oldText);
-
     todoItem.classList.add('id', 'editing');
     todoItem.value = oldText;
     todoItem.focus();
@@ -103,6 +101,7 @@ function editTodo(event) {
   }
 }
 
+//FILTER
 function filterTodo(event) {
   const todos = todoList.childNodes;
   todos.forEach(function (todo) {
@@ -131,6 +130,7 @@ function filterTodo(event) {
   });
 }
 
+// LOCAL
 function saveLocalTodos(todo) {
   let todos;
   if (localStorage.getItem('todos') === null) {
